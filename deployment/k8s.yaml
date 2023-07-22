@@ -1,0 +1,72 @@
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fr-minitools
+  namespace: olivia
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    ingress.kubernetes.io/ssl-host: fr-minitools.vendrus.teamfrag.net
+    ingress.kubernetes.io/ssl-redirect: 'true'
+    ingress.kubernetes.io/ssl-temporary-redirect: 'true'
+    kubernetes.io/ingress.allow-http: 'false'
+spec:
+  tls:
+    - hosts:
+        - fr-minitools.vendrus.teamfrag.net
+      secretName: fr-minitools-tls
+  rules:
+    - host: fr-minitools.vendrus.teamfrag.net
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: fr-minitools
+                port:
+                  number: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fr-minitools
+  namespace: olivia
+  labels:
+    app.kubernetes.io/name: fr-minitools
+    app.kubernetes.io/component: frontend
+spec:
+  ports:
+    - port: 80
+      name: http
+      protocol: TCP
+  selector:
+    app.kubernetes.io/name: fr-minitools
+    app.kubernetes.io/component: frontend
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fr-minitools
+  namespace: olivia
+  labels:
+    app.kubernetes.io/name: fr-minitools
+    app.kubernetes.io/component: frontend
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: fr-minitools
+      app.kubernetes.io/component: frontend
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: fr-minitools
+        app.kubernetes.io/component: frontend
+    spec:
+      containers:
+        - name: frontend
+          image: ghcr.io/vendrussci/fr-minitools:0.1.0
+          ports:
+            - containerPort: 80
+              name: http
+              protocol: TCP
