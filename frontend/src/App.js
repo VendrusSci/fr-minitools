@@ -3,6 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navbar } from './Utils/Navbar.js'
 import { About } from './About.js';
 import './CSS/App.css';
+import { HatchCheck } from './date-check/HatchCheck.js';
+import { GenCheck } from './generations-check/GenCheck.js';
+import { AchieveGen } from './db-gen/DatabaseGenerator.js';
 
 function App() {
   return (
@@ -14,18 +17,18 @@ function App() {
           <Navbar />
         </header>
         <Routes>
-          {/* <Route path="/" element={
-            <PreviewOffspring />}>
+          <Route path="/" element={
+            <HatchCheck />}>
           </Route>
-          <Route path="/preview" element={
-            <PreviewOffspring />}>
+          <Route path="/hatchcheck" element={
+            <HatchCheck />}>
           </Route>
-          <Route path="/search" element={
-            <SearchUrlGenerator />}>
+          <Route path="/gencheck" element={
+            <GenCheck />}>
           </Route>
           <Route path="/about" element={
             <About />}>
-          </Route> */}
+          </Route>
         </Routes>
       </BrowserRouter>
       <br />

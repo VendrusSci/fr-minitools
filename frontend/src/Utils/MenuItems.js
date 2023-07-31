@@ -47,23 +47,6 @@ export const menuItems = [
         ]
     },
     {
-        title:  'Minitools',
-        submenu: [
-            {
-                title:  'Achievement Generator',
-                url:    'https://fr-minitools.vendrus.teamfrag.net/achievement'
-            },
-            {
-                title:  'Generation Calculator',
-                url:    'https://fr-minitools.vendrus.teamfrag.net/generation'
-            },
-            {
-                title:  'Age/Nest Date Calculator',
-                url:    'https://fr-minitools.vendrus.teamfrag.net/'
-            }
-        ]   
-    },
-    {
         title:  'Help',
         url:    '/about',
         submenu: [
@@ -73,7 +56,7 @@ export const menuItems = [
             },
             {
                 title:  'Code',
-                url:    'https://github.com/VendrusSci/Reskin'
+                url:    'https://github.com/VendrusSci/FR-minitools'
             },
             {
                 title:  'Guide',

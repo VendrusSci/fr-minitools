@@ -1,0 +1,106 @@
+.Minitools-heading{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: large;
+    color: white;
+}
+
+.Minitools-body {
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: white;
+    flex-wrap: wrap;
+  }
+
+.Minitools-title {
+    width: 100%;
+    padding: 0.5rem 0rem;
+    background-color: #282c34;
+    color: white;
+}
+
+label{
+    color: white;
+    padding-right: 20px;
+}
+
+th{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.Minitools-table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Minitools-dateblock{
+    display: flex;
+    align-items: stretch;
+    padding-bottom: 10px;
+}
+
+.Minitools-datepicker{
+    padding-right: 10px;
+}
+
+.Minitools-eventname{
+    text-align: left;
+}                  
+
+.Minitools-tabs {
+    width: 80%;
+    height: auto;
+    min-height: 400px;
+    background: #053742;
+    margin: 1rem auto 1.5rem;
+    padding: 2rem 1rem;
+    color: #E8F0F2;
+    border-radius: 2rem;
+    @media (max-width: 769px) {
+     padding: 2rem 0;
+    }
+}
+
+ul.Minitools-tabnav {
+    width: 60%;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid cadetblue;
+    border-radius: 2rem;
+    padding-left: 0px;
+    @media (max-width: 768px) {
+      width: 90%;
+    }
+  }
+  ul.Minitools-tabnav li {
+    width: 50%;
+    padding: 1rem;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.7s;
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+  }
+  ul.Minitools-tabnav li:nth-child(2) {
+    border-radius: 0;
+  }
+  ul.Minitools-tabnav li:nth-child(3) {
+    border-radius: 0;
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
+  }
+  ul.Minitools-tabnav li:hover {
+    background: rgba(50, 224, 196, 0.15);
+  }
+  ul.Minitools-tabnav li.active {
+    background: cadetblue;
+  }
