@@ -33,6 +33,11 @@ th{
     padding-right: 20px;
 }
 
+.Minitools-malelabel{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .Minitools-table{
     display: flex;
     flex-direction: column;
@@ -51,7 +56,42 @@ th{
 
 .Minitools-eventname{
     text-align: left;
-}                  
+}
+
+.Minitools-genlist{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.Minitools-gendiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.Minitools-gendiv input{
+    margin-bottom: 5px;
+}
+
+.canbreed{
+    background-color: lightgreen;
+}
+
+.Minitools-toggle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.Minitools-maletoggle{
+    padding-bottom: 60px;
+    justify-content: space-around;
+}
 
 .Minitools-tabs {
     width: 80%;

@@ -3,11 +3,12 @@ import React from "react";
 import "../CSS/Minitools.css"
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { datesChristian, datesHindu, datesIslam, datesJewish, datesSeason, datesOther, datesFest } from "../Data/major-dates";
+import { datesChristian, datesIslam, datesJewish, datesSeason, datesOther, datesFest } from "../Data/major-dates";
 
 export function HatchCheck(){
 
-    const nestDays = 6;
+    const nestDays = 5;
+    const msPerDay = 24*60*60*1000;
 
     const nestDateToday = new Date(new Date().getTime()+(nestDays*24*60*60*1000));
     const [date, setDate] = useState(nestDateToday);
@@ -16,17 +17,17 @@ export function HatchCheck(){
     
     function updateNestDate(newDate){
         setDate(newDate);
-        setNestDate(new Date(newDate.getTime()-(nestDays*24*60*60*1000)));
+        setNestDate(new Date(newDate.getTime()-(nestDays*msPerDay)));
     }
 
     function updateDate(newDate){
         setNestDate(newDate);
-        setDate(new Date(newDate.getTime()+(nestDays*24*60*60*1000)));
+        setDate(new Date(newDate.getTime()+(nestDays*msPerDay)));
     }
 
     function getNestDate(hatchDateString){
         let hatchDate = new Date(hatchDateString);
-        return new Date(hatchDate.getTime()-(nestDays*24*60*60*1000)).toLocaleDateString();
+        return new Date(hatchDate.getTime()-(nestDays*msPerDay)).toLocaleDateString();
     }
 
     function getOtherTableRows(){

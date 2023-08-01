@@ -5,7 +5,7 @@ import { About } from './About.js';
 import './CSS/App.css';
 import { HatchCheck } from './date-check/HatchCheck.js';
 import { GenCheck } from './generations-check/GenCheck.js';
-import { AchieveGen } from './db-gen/DatabaseGenerator.js';
+import { AgeCheck } from './date-check/AgeCheck.js';
 
 function App() {
   return (
@@ -22,6 +22,9 @@ function App() {
           </Route>
           <Route path="/hatchcheck" element={
             <HatchCheck />}>
+          </Route>
+          <Route path="/agecheck" element={
+            <AgeCheck />}>
           </Route>
           <Route path="/gencheck" element={
             <GenCheck />}>
