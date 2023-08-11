@@ -65,7 +65,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ghcr.io/vendrussci/fr-minitools:0.1.0
+          image: ghcr.io/vendrussci/fr-minitools:1.0.0
           ports:
             - containerPort: 80
               name: http

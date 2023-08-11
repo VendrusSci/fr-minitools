@@ -1,5 +1,5 @@
 import { Toaster } from 'react-hot-toast';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Navbar } from './Utils/Navbar.js'
 import { About } from './About.js';
 import './CSS/App.css';
@@ -11,8 +11,6 @@ function App() {
   return (
     <div className="App">
       <div><Toaster /></div>
-
-      <BrowserRouter>
         <header>
           <Navbar />
         </header>
@@ -33,7 +31,6 @@ function App() {
             <About />}>
           </Route>
         </Routes>
-      </BrowserRouter>
       <br />
       <br />
       <div className='App-footer'>

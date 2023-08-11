@@ -65,8 +65,8 @@ export function AgeCheck(){
             <div>
             <label>{ daysToSaturday > 5 ? `Hatch on or before ${new Date(nextSaturday.getTime()-(growDays*msPerDay)).toLocaleDateString}` : ""}</label>
                 <label>{ 5-daysToSaturday <= 0 ?
-                        5-daysToSaturday === 0 ? `Check hatch date if < 1 day (born ${new Date(nextSaturday.getTime()-(growDays*msPerDay)).toLocaleDateString()} or earlier)` : "All current hatchlings"
-                        : `AH age of at least ${5-daysToSaturday} day${5-daysToSaturday === 1 ? '' : 's'} (born ${new Date(nextSaturday.getTime()-(growDays*msPerDay)).toLocaleDateString()} or earlier)`
+                        5-daysToSaturday === 0 ? `1 day old or born ${new Date(nextSaturday.getTime()-(growDays*msPerDay)).toLocaleDateString()}` : "All current hatchlings"
+                        : `${6-daysToSaturday} day${6-daysToSaturday === 1 ? '' : 's'} old, or ${5-daysToSaturday} day${5-daysToSaturday === 1 ? '' : 's'} old and born ${new Date(nextSaturday.getTime()-(growDays*msPerDay)).toLocaleDateString()}`
                     }
                 </label>
             </div>
@@ -75,8 +75,8 @@ export function AgeCheck(){
             <div>
                 <label>{ daysToSunday > 5 ? `Hatch on or before ${new Date(nextSunday.getTime()-(growDays*msPerDay)).toLocaleDateString}` : ""}</label>
                 <label>{ 5-daysToSunday <= 0 ?
-                        5-daysToSunday === 0 ? "Check hatch date if < 1 day" : "All current hatchlings"
-                        : `AH age of at least ${5-daysToSunday} day${5-daysToSunday === 1 ? '' : 's'} (born ${new Date(nextSunday.getTime()-(growDays*msPerDay)).toLocaleDateString()} or earlier)`
+                        5-daysToSunday === 0 ? `1 day old or born ${new Date(nextSunday.getTime()-(growDays*msPerDay)).toLocaleDateString()}` : "All current hatchlings"
+                        : `${6-daysToSunday} day${6-daysToSunday === 1 ? '' : 's'} old, or ${5-daysToSunday} day${5-daysToSunday === 1 ? '' : 's'} old and born ${new Date(nextSunday.getTime()-(growDays*msPerDay)).toLocaleDateString()}`
                     }
                 </label>
             </div>

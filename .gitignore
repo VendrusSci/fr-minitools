@@ -1,0 +1,5 @@
+backend/db/itemdb.db
+backend/db/itemdb.db-journal
+backend/.vs
+backend/backend/bin/
+backend/backend/obj/

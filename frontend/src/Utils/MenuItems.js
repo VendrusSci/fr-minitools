@@ -3,16 +3,16 @@ export const menuItems = [
         title:  'Tools',
         submenu: [
             {
-                title: 'Age/Nest Date Calculator',
-                url:   '/hatchcheck'
+                title: 'Nesting Date Calculator',
+                link:   '/hatchcheck'
             },
             {
-                title: 'Generation Calculator',
-                url:   '/gencheck'
+                title: 'Age-up Date Calculator',
+                link:   '/agecheck'
             },
             {
-                title: 'Achievement Generator',
-                url:   '/achievegen'
+                title: 'Generation Checker',
+                link:   '/gencheck'
             }
         ]
     },
