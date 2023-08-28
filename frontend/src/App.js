@@ -6,6 +6,8 @@ import './CSS/App.css';
 import { HatchCheck } from './date-check/HatchCheck.js';
 import { GenCheck } from './generations-check/GenCheck.js';
 import { AgeCheck } from './date-check/AgeCheck.js';
+import { ExaltCheck } from './exalt-check/ExaltCheck.js';
+import { NumberConverter } from './number-converter/NumberConverter.js';
 
 function App() {
   return (
@@ -26,6 +28,12 @@ function App() {
           </Route>
           <Route path="/gencheck" element={
             <GenCheck />}>
+          </Route>
+          <Route path="/exaltcheck" element={
+            <ExaltCheck />}>
+          </Route>
+          <Route path="/numconvert" element={
+            <NumberConverter />}>
           </Route>
           <Route path="/about" element={
             <About />}>

@@ -63,17 +63,17 @@ export function AgeCheck(){
             <br/>
             <label className="Minitools-heading"><b>Hatchlings that will age up on or before next saturday (dom week end):</b></label>
             <div>
-            <label>{ daysToSaturday > 5 ? `Hatch on or before ${new Date(nextSaturday.getTime()-(growDays*msPerDay)).toLocaleDateString}` : ""}</label>
-                <label>{ 5-daysToSaturday <= 0 ?
-                        5-daysToSaturday === 0 ? `1 day old or born ${new Date(nextSaturday.getTime()-(growDays*msPerDay)).toLocaleDateString()}` : "All current hatchlings"
-                        : `${6-daysToSaturday} day${6-daysToSaturday === 1 ? '' : 's'} old, or ${5-daysToSaturday} day${5-daysToSaturday === 1 ? '' : 's'} old and born ${new Date(nextSaturday.getTime()-(growDays*msPerDay)).toLocaleDateString()}`
-                    }
-                </label>
+            <label>{ daysToSaturday > 5 ? `Hatch on or before ${new Date(nextSaturday.getTime()-(growDays*msPerDay)).toLocaleDateString()}` : ""}</label>
+            <label>{ 5-daysToSaturday <= 0 ?
+                    5-daysToSaturday === 0 ? `1 day old or born ${new Date(nextSaturday.getTime()-(growDays*msPerDay)).toLocaleDateString()}` : "All current hatchlings"
+                    : `${6-daysToSaturday} day${6-daysToSaturday === 1 ? '' : 's'} old, or ${5-daysToSaturday} day${5-daysToSaturday === 1 ? '' : 's'} old and born ${new Date(nextSaturday.getTime()-(growDays*msPerDay)).toLocaleDateString()}`
+                }
+            </label>
             </div>
             <br/>
             <label className="Minitools-heading"><b>Hatchlings that will age up on or before next sunday (dom week start):</b></label>
             <div>
-                <label>{ daysToSunday > 5 ? `Hatch on or before ${new Date(nextSunday.getTime()-(growDays*msPerDay)).toLocaleDateString}` : ""}</label>
+                <label>{ daysToSunday > 5 ? `Hatch on or before ${new Date(nextSunday.getTime()-(growDays*msPerDay)).toLocaleDateString()}` : ""}</label>
                 <label>{ 5-daysToSunday <= 0 ?
                         5-daysToSunday === 0 ? `1 day old or born ${new Date(nextSunday.getTime()-(growDays*msPerDay)).toLocaleDateString()}` : "All current hatchlings"
                         : `${6-daysToSunday} day${6-daysToSunday === 1 ? '' : 's'} old, or ${5-daysToSunday} day${5-daysToSunday === 1 ? '' : 's'} old and born ${new Date(nextSunday.getTime()-(growDays*msPerDay)).toLocaleDateString()}`

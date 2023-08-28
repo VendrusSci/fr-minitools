@@ -13,6 +13,14 @@ export const menuItems = [
             {
                 title: 'Generation Checker',
                 link:   '/gencheck'
+            },
+            {
+                title: 'Exalt Level Calculator',
+                link:   '/exaltcheck'
+            },
+            {
+                title: 'Number/Currency Coverter',
+                link:   '/numconvert'
             }
         ]
     },
