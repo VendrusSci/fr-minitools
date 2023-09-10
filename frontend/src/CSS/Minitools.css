@@ -80,6 +80,15 @@ th{
     background-color: lightgreen;
 }
 
+.Minitools-numberInput{
+    display: flex;
+    flex-direction: row;
+}
+
+.Minitools-numberInputInput{
+    max-width: 60px;
+}
+
 .Minitools-toggle {
     display: flex;
     flex-direction: row;
@@ -106,6 +115,47 @@ th{
      padding: 2rem 0;
     }
 }
+
+.Minitools-numbertext{
+    max-height: 17px;
+    max-width: 150px;
+    resize: none;
+}
+
+.Minitools-textnumbertext{
+    max-height: 100px;
+    max-width: 300px;
+    min-width: 300px;
+    resize: none;
+}
+
+.Minitools-ratiotext{
+    margin-top: 5px;
+    max-height: 17px;
+    max-width: 100px;
+    resize: none;
+}
+
+.Minitools-ratiolabel{
+    padding-right: 5px;
+} 
+
+.Minitools-tdright{
+    text-align: right;
+    vertical-align: middle;
+}
+
+.Minitools-tdleft{
+    text-align: left;
+    vertical-align: middle;
+}
+
+.Minitools-ratioflex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 
 ul.Minitools-tabnav {
     width: 60%;

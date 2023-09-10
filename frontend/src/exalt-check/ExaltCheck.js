@@ -56,8 +56,9 @@ export function ExaltCheck(){
                     </tbody>
                 </table>
             </div>
+            <br/>
+            <br/>
             <div className="Minitools-body">
-                <label className="Minitools-heading">Average Exalt Payout</label>
                 <table>
                     <thead>
                         <tr>
