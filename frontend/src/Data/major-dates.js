@@ -20,6 +20,7 @@ export const datesSeason = [
 ]
  
 export const datesOther = [
+    ["Halloween",        "2023-10-31"],
     ["Thanksgiving",     "2023-11-23"],
     ["Chinese New Year", "2024-02-10"],
     ["Mother's Day (UK)","2024-03-10"],
