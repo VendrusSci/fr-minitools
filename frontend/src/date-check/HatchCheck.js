@@ -27,6 +27,7 @@ export function HatchCheck(){
 
     function getNestDate(hatchDateString){
         let hatchDate = new Date(hatchDateString);
+        hatchDate = enforceLocal(hatchDate);
         return new Date(hatchDate.getTime()-(nestDays*msPerDay)).toLocaleDateString();
     }
 
@@ -35,7 +36,7 @@ export function HatchCheck(){
             return (
                 <tr key={item[0]}>
                     <td key={item[0]+"_n"} className="Minitools-eventname">{item[0]}</td>
-                    <td key={item[0]+"_d"}>{new Date(item[1]).toLocaleDateString()}</td>
+                    <td key={item[0]+"_d"}>{enforceLocal(new Date(item[1])).toLocaleDateString()}</td>
                     <td key={item[0]+"_nd"}>{getNestDate(item[1])}</td>
                 </tr>
             );
@@ -47,7 +48,7 @@ export function HatchCheck(){
             return (
                 <tr key={item[0]}>
                     <td key={item[0]+"_n"} className="Minitools-eventname">{item[0]}</td>
-                    <td key={item[0]+"_d"}>{new Date(item[1]).toLocaleDateString()}</td>
+                    <td key={item[0]+"_d"}>{enforceLocal(new Date(item[1])).toLocaleDateString()}</td>
                     <td key={item[0]+"_nd"}>{getNestDate(item[1])}</td>
                 </tr>
             )
@@ -61,7 +62,7 @@ export function HatchCheck(){
             return (
                 <tr key={item[0]}>
                     <td key={item[0]+"_n"} className="Minitools-eventname">{item[0]}</td>
-                    <td key={item[0]+"_d"}>{new Date(item[1]).toLocaleDateString()}</td>
+                    <td key={item[0]+"_d"}>{enforceLocal(new Date(item[1])).toLocaleDateString()}</td>
                     <td key={item[0]+"_nd"}>{getNestDate(item[1])}</td>
                 </tr>
             );
@@ -73,7 +74,7 @@ export function HatchCheck(){
             return (
                 <tr key={item[0]}>
                     <td key={item[0]+"_n"} className="Minitools-eventname">{item[0]}</td>
-                    <td key={item[0]+"_d"}>{new Date(item[1]).toLocaleDateString()}</td>
+                    <td key={item[0]+"_d"}>{enforceLocal(new Date(item[1])).toLocaleDateString()}</td>
                     <td key={item[0]+"_nd"}>{getNestDate(item[1])}</td>
                 </tr>
             )
@@ -85,7 +86,7 @@ export function HatchCheck(){
             return (
                 <tr key={item[0]}>
                     <td key={item[0]+"_n"} className="Minitools-eventname">{item[0]}</td>
-                    <td key={item[0]+"_d"}>{new Date(item[1]).toLocaleDateString()}</td>
+                    <td key={item[0]+"_d"}>{enforceLocal(new Date(item[1])).toLocaleDateString()}</td>
                     <td key={item[0]+"_nd"}>{getNestDate(item[1])}</td>
                 </tr>
             )
@@ -136,7 +137,7 @@ export function HatchCheck(){
                                                 return (
                                                     <tr key={item[0]}>
                                                         <td key={item[0]+"_n"} className="Minitools-eventname">{item[0]}</td>
-                                                        <td key={item[0]+"_d"}>{new Date(item[1]).toLocaleDateString()}</td>
+                                                        <td key={item[0]+"_d"}>{enforceLocal(new Date(item[1])).toLocaleDateString()}</td>
                                                         <td key={item[0]+"_nd"}>{getNestDate(item[1])}</td>
                                                     </tr>
                                                 );
@@ -158,4 +159,9 @@ export function HatchCheck(){
         
         </div>
     );
+}
+
+function enforceLocal(time){
+    time.setMinutes(time.getTimezoneOffset());
+    return time;
 }
